@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Pendaftaran Futsal</title>
+  </head>
+  <body>
+    <h1>Form Pendaftaran Futsal</h1>
+    <p style="font-style: italic">
+      Silakan isi formulir di bawah ini untuk mendaftar sebagai peserta futsal.
+    </p>
+
+    <form action="/submit" method="post">
+      <!-- Data Pribadi -->
+      <fieldset>
+        <legend style="font-weight: bold; font-size: 20px">Data Pribadi</legend>
+
+        <label for="fullname">Nama Lengkap</label><br />
+        <input id="fullname" name="fullname" type="text" required /><br /><br />
+
+        <label for="email">Email</label><br />
+        <input id="email" name="email" type="email" required /><br /><br />
+
+        <label for="nim">NIM</label><br />
+        <input id="nim" name="nim" type="number" required /><br /><br />
+
+        <label for="phone">No. HP</label><br />
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder="contoh: 0812-3456-7890"
+          required
+        /><br /><br />
+
+        <label for="birthdate">Tanggal Lahir</label><br />
+        <input
+          id="birthdate"
+          name="birthdate"
+          type="date"
+          required
+        /><br /><br />
+      </fieldset>
+
+      <!-- Informasi Pendaftaran -->
+      <fieldset>
+        <legend style="font-weight: bold; font-size: 20px">
+          Informasi Pendaftaran
+        </legend>
+
+        <label for="position">Posisi Favorit</label><br />
+        <select id="position" name="position" required>
+          <option value="" disabled selected>Pilih posisi</option>
+          <option value="kiper">Kiper</option>
+          <option value="belakang">Pemain Belakang</option>
+          <option value="tengah">Pemain Tengah</option>
+          <option value="depan">Pemain Depan</option></select
+        ><br /><br />
+
+        <label for="experience">Pengalaman Bermain (tahun)</label><br />
+        <input
+          id="experience"
+          name="experience"
+          type="number"
+          min="0"
+          max="20"
+          placeholder="contoh: 3"
+          required
+        /><br />
+      </fieldset>
+
+      <!-- Tindakan -->
+      <p>
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+        <a href="login.html">Sudah punya akun? Login di sini</a>
+      </p>
+    </form>
+  </body>
+</html>
